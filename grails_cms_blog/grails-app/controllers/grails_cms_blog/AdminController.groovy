@@ -1,6 +1,6 @@
 package grails_cms_blog
 
-class TestController {
-
+class AdminController {
+// for back end
     def index() { }
 }
