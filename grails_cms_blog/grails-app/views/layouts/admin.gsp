@@ -13,14 +13,36 @@
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<r:require modules="bootstrap"/>
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'admin.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	<body>
-
-		<g:layoutBody/>
+	<body>	
+		<div class="container">
+			<div class="header">
+				<h1>Grails cms blog - Administrator</h1>
+			</div> 
+			<div class="navbar">
+  				<div class="navbar-inner">
+					<ul class="nav">
+	  					<li class="active"><a href="#">Home</a></li>
+	  					<li><a href="#">Category</a></li>
+	  					<li><a href="#">Article</a></li>
+	  					<li><a href="#">User</a></li>
+	  					<li><a href="#">Subscriber</a></li>
+	  					<li><a href="#">System</a></li>
+					</ul>
+					<ul class="nav pull-right">
+					<li><a href="#">Login</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<g:layoutBody/>	
+			</div>
+		</div>
+		
 
 		<g:javascript library="application"/>
 		<r:layoutResources />

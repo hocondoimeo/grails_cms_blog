@@ -12,14 +12,34 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
+		<r:require modules="bootstrap"/>
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body>
-
-		<g:layoutBody/>
+<div class="container">
+			<div class="header">
+				<h1>Grails cms blog - Front end</h1>
+			</div> 
+			<div class="navbar">
+  				<div class="navbar-inner">
+					<ul class="nav">
+	  					<li class="active"><a href="#">Home</a></li>
+	  					<li><a href="#">Category</a></li>
+	  					
+	  					<li><a href="#">Subscribe</a></li>	  					
+					</ul>
+					<form class="navbar-search pull-right" action="">
+                      <input type="text" class="search-query span3" placeholder="Search">
+                    </form>
+				</div>
+			</div>
+			<div class="content border">
+				<g:layoutBody/>	
+			</div>
+		</div>	
 
 		<g:javascript library="application"/>
 		<r:layoutResources />
