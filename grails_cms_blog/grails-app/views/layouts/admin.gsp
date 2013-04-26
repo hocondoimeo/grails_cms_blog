@@ -26,12 +26,12 @@
 			<div class="navbar">
   				<div class="navbar-inner">
 					<ul class="nav">
-	  					<li class="active"><a href="#">Home</a></li>
-	  					<li><a href="#">Category</a></li>
-	  					<li><a href="#">Article</a></li>
-	  					<li><a href="#">User</a></li>
-	  					<li><a href="#">Subscriber</a></li>
-	  					<li><a href="#">System</a></li>
+	  					<li class="active"><g:link action="index" controller="admin">Home</g:link></li>
+	  					<li><g:link action="index" controller="category">Category</g:link></li>
+	  					<li><g:link action="index" controller="article">Article</g:link></li>
+	  					<li><g:link action="index" controller="user">User</g:link></li>
+	  					<li><g:link action="index" controller="subscriber">Subscriber</g:link></li>
+	  					<li><g:link action="system" controller="admin">System</g:link></li>
 					</ul>
 					<ul class="nav pull-right">
 					<li><a href="#">Login</a></li>

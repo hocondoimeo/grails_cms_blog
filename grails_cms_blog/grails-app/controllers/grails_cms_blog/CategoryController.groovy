@@ -2,5 +2,6 @@ package grails_cms_blog
 
 class CategoryController {
 
-    def index() { }
+	def scaffold = true
+//    def index() { }
 }
