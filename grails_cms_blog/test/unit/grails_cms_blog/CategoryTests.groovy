@@ -3,6 +3,8 @@ package grails_cms_blog
 
 
 import grails.test.mixin.*
+import grails_cms_blog.admin.Category;
+
 import org.junit.*
 
 /**
