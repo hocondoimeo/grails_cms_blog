@@ -28,8 +28,8 @@
 					<ul class="nav">
 	  					<li class="active"><a href="#">Home</a></li>
 	  					<li><a href="#">Category</a></li>
-	  					
-	  					<li><a href="#">Subscribe</a></li>	  					
+	  					<li><a href="#">Subscribe</a></li>
+	  					<li><g:link action="index" controller="admin">Administrator</g:link></li>	  					
 					</ul>
 					<form class="navbar-search pull-right" action="">
                       <input type="text" class="search-query span3" placeholder="Search">

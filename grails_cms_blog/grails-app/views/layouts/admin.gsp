@@ -27,10 +27,10 @@
   				<div class="navbar-inner">
 					<ul class="nav">
 	  					<li class="active"><g:link action="index" controller="admin">Home</g:link></li>
-	  					<li><g:link action="index" controller="category">Category</g:link></li>
-	  					<li><g:link action="index" controller="article">Article</g:link></li>
-	  					<li><g:link action="index" controller="user">User</g:link></li>
-	  					<li><g:link action="index" controller="subscriber">Subscriber</g:link></li>
+	  					<li><g:link action="index" controller="admin/category">Category</g:link></li>
+	  					<li><g:link action="index" controller="admin/article">Article</g:link></li>
+	  					<li><g:link action="list" controller="admin/user">User</g:link></li>
+	  					<li><g:link action="index" controller="admin/subscriber">Subscriber</g:link></li>
 	  					<li><g:link action="system" controller="admin">System</g:link></li>
 					</ul>
 					<ul class="nav pull-right">
