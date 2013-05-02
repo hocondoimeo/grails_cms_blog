@@ -1,35 +1,35 @@
-<%@ page import="grails_cms_blog.admin.CategoryAdmin" %>
+<%@ page import="grails_cms_blog.Category" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="admin">
-		<g:set var="entityName" value="${message(code: 'categoryAdmin.label', default: 'Category')}" />
+		<g:set var="entityName" value="${message(code: 'category.label', default: 'Category')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#edit-categoryAdmin" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<a href="#edit-category" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div role="navigation">
 			<ul class="breadcrumb">
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
+				<li><a class="home" href="${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
 				<li><g:link class="list" action="list" controller="admin/category"><g:message code="default.list.label" args="[entityName]" /></g:link> <span class="divider">/</span></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create" controller="admin/category"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="edit-categoryAdmin" class="content scaffold-edit" role="main">
+		<div id="edit-category" class="content scaffold-edit" role="main">
 			<h1 class="tittle"><g:message code="default.edit.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="alert" role="status">${flash.message}</div>
 			</g:if>
-			<g:hasErrors bean="${categoryAdminInstance}">
+			<g:hasErrors bean="${categoryInstance}">
 			<ul class="errors" role="alert">
-				<g:eachError bean="${categoryAdminInstance}" var="error">
+				<g:eachError bean="${categoryInstance}" var="error">
 				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
 			<g:form method="post"  class="form-horizontal">
-				<g:hiddenField name="id" value="${categoryAdminInstance?.id}" />
-				<g:hiddenField name="version" value="${categoryAdminInstance?.version}" />
+				<g:hiddenField name="id" value="${categoryInstance?.id}" />
+				<g:hiddenField name="version" value="${categoryInstance?.version}" />
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

@@ -3,7 +3,7 @@ package grails_cms_blog
 
 
 import grails.test.mixin.*
-import grails_cms_blog.admin.Article;
+import grails_cms_blog.Article;
 
 import org.junit.*
 

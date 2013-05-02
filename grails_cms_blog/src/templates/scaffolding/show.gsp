@@ -11,7 +11,7 @@
 		<a href="#show-${domainClass.propertyName}" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div role="navigation">
 			<ul class="breadcrumb">
-				<li><a class="home" href="\${createLink(uri: '/')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
+				<li><a class="home" href="\${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
 				<li><g:link class="list" action="list" controller="admin/${domainClass.propertyName.toLowerCase()}"><g:message code="default.list.label" args="[entityName]" /></g:link> <span class="divider">/</span></li>
 				<li><g:link class="create" action="create" controller="admin/${domainClass.propertyName.toLowerCase()}"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
