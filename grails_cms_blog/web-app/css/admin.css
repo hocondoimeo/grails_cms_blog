@@ -8,7 +8,6 @@ padding: 15px;
 color: #888;
 text-shadow: 0 1px 0 black;
 }
-user agent stylesheet
 .border {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -42,5 +41,8 @@ user agent stylesheet
 	display: none
 }
 .required-indicator{
+	color: red
+}
+.errors{
 	color: red
 }

@@ -26,12 +26,12 @@
 			<div class="navbar">
   				<div class="navbar-inner">
 					<ul class="nav">
-	  					<li class="active"><g:link action="index" controller="admin">Home</g:link></li>
-	  					<li><g:link action="index" controller="admin/category">Category</g:link></li>
-	  					<li><g:link action="index" controller="admin/article">Article</g:link></li>
-	  					<li><g:link action="list" controller="admin/user">User</g:link></li>
-	  					<li><g:link action="index" controller="admin/subscriber">Subscriber</g:link></li>
-	  					<li><g:link action="system" controller="admin">System</g:link></li>
+	  					<li <g:activeMenu controller="indexAdmin" action="index"></g:activeMenu> ><g:link action="index" controller="admin/index">Home</g:link></li>
+	  					<li <g:activeMenu controller="categoryAdmin"></g:activeMenu> ><g:link action="index" controller="admin/category">Category</g:link></li>
+	  					<li <g:activeMenu controller="articleAdmin"></g:activeMenu> ><g:link action="index" controller="admin/article">Article</g:link></li>
+	  					<li <g:activeMenu controller="userAdmin"></g:activeMenu> ><g:link action="list" controller="admin/user">User</g:link></li>
+	  					<li <g:activeMenu controller="subscriberAdmin"></g:activeMenu> ><g:link action="index" controller="admin/subscriber">Subscriber</g:link></li>
+	  					<li <g:activeMenu controller="indexAdmin" action="system"></g:activeMenu>><g:link action="system" controller="admin/index">System</g:link></li>
 					</ul>
 					<ul class="nav pull-right">
 					<li><a href="#">Login</a></li>
@@ -39,10 +39,10 @@
 				</div>
 			</div>
 			<div class="content">
+				
 				<g:layoutBody/>	
 			</div>
-		</div>
-		
+		</div>		
 
 		<g:javascript library="application"/>
 		<r:layoutResources />
