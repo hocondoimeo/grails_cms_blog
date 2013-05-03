@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="admin/${className.toLowerCase()" key="selection"/>
+		<list key="findhistory">
+			<item value="admin/${propertyName.toLowerCase()"/>
+			<item value="redirect(action:"/>
+			<item value="redirect(action: &quot;list&quot;"/>
+			<item value="userAdminInstance"/>
+			<item value="renderNoSelection"/>
+			<item value="UserAdmin"/>
+			<item value="&lt;g:select name"/>
+		</list>
+		<list key="replacehistory">
+			<item value="admin/${className.toLowerCase()"/>
+			<item value="admin/${propertyName.toLowerCase()"/>
+			<item value="redirect(controller: &quot;admin/${propertyName.toLowerCase()}&quot;,action:"/>
+			<item value="redirect(controller: &quot;admin/&quot;,action:"/>
+			<item value="userInstance"/>
+		</list>
+	</section>
+</section>

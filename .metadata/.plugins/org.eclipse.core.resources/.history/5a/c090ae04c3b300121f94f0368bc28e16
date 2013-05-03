@@ -1,0 +1,25 @@
+package grails_cms_blog
+
+import java.util.Date;
+
+class Article {
+	String title
+	String desc
+	String content
+	Date dateCreated // Predefined names by Grails will be filled automatically
+	Date lastUpdated // Predefined names by Grails will be filled automatically
+	
+	static belongsTo = [user:User, category:Category]
+	
+    static constraints = {
+		title(blank:false, nullable: false, size:3..30, matches:"[a-zA-Z1-9_ ]+")
+		desc(blank:false, nullable: false, size:3..100)
+		content(blank:false, nullable: false, size:3..1000)
+    }
+	
+	static public bootstrap(){
+		new Article(title: 'Technical News', desc: 'IT desc', content: 'Predefined names by Grails will be filled automatically', category: 'News').save(flush: true)
+		new Article(title: 'Football Sports', desc: 'Football desc', content: 'Predefined names by Grails will be filled automatically', category: 'News').save(flush: true)
+		new Article(title: 'Rock Music', desc: 'Rock desc', content: 'Predefined names by Grails will be filled automatically', category: 'News').save(flush: true)
+	}
+}

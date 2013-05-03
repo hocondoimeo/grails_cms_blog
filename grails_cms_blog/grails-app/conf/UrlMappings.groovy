@@ -8,6 +8,7 @@ class UrlMappings {
 		}
 		"/"(controller: "index", action: "index")
 		"/admin/"(controller: "indexAdmin")
+		"/admin/index"(controller: "indexAdmin")
 		"/admin/$cName"{
 			controller = {params.cName + "Admin"}
 			action = 'list'

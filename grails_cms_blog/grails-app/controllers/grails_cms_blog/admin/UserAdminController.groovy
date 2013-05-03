@@ -101,4 +101,23 @@ class UserAdminController {
             redirect(controller: "admin/user",action: "show", id: id)
         }
     }
+	
+	def login = {}
+
+	def authenticate = {
+		def user = User.findByEmailAndPassword(params.email, params.password)
+		if(user){
+			session.user = user
+			flash.message = "Hello ${user.name}!"
+			redirect(controller: "admin/")
+		}else{
+			flash.message = "Sorry, ${params.email}. Please try again."
+			redirect(controller: "admin/user", action: "login")
+		}
+	}
+	def logout = {
+		flash.message = "Goodbye ${session.user.name}"
+		session.user = null
+		redirect(controller: "admin/")
+	}
 }

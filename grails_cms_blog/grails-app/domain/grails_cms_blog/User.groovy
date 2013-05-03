@@ -6,16 +6,24 @@ class User {
 	String password
 	Date dateCreated // Predefined names by Grails will be filled automatically
 	Date lastUpdated // Predefined names by Grails will be filled automatically
+	String role = "author"
 	
-	static belongTo = [article: Article]
+	static hasMany = [articles: Article]
 	 
     static constraints = {
 		name(blank:false, nullable: false, size:3..30, matches:"[a-zA-Z1-9_ ]+")
 		email(email:true, blank:false, nullable: false)
 		password(password: true, blank:false, nullable: false)
+		role(inList: ["admin", "author"])
     }
 	
 	String toString(){
 		return name;
+	}
+	
+	static public bootstrap(){
+		new User(name:'admin', email:'admin@kiss-concept.com', password:'123456', role: "admin").save(flush: true)
+		new User(name:'author', email:'author@kiss-concept.com', password:'123456', role: "author").save(flush: true)
+		
 	}
 }

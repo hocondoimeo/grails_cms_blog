@@ -11,7 +11,7 @@
 		<a href="#list-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div role="navigation">
 			<ul class="breadcrumb">
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
+				<li><a class="home" href="${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
 				<li><g:link class="create" action="create" controller="admin/user"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
@@ -30,6 +30,8 @@
 					
 						<%--<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Password')}" />--%>
 					
+						<g:sortableColumn property="role" title="${message(code: 'user.role.label', default: 'Role')}" />
+					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'user.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'user.lastUpdated.label', default: 'Last Updated')}" />
@@ -45,6 +47,8 @@
 						<td>${fieldValue(bean: userInstance, field: "email")}</td>
 					
 						<%--<td>${fieldValue(bean: userInstance, field: "password")}</td>--%>
+					
+						<td>${fieldValue(bean: userInstance, field: "role")}</td>
 					
 						<td><g:formatDate date="${userInstance.dateCreated}" /></td>
 					

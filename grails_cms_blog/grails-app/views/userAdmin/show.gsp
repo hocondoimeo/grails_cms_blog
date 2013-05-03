@@ -11,9 +11,9 @@
 		<a href="#show-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div role="navigation">
 			<ul class="breadcrumb">
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
+				<li><a class="home" href="${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
 				<li><g:link class="list" action="list" controller="admin/user"><g:message code="default.list.label" args="[entityName]" /></g:link> <span class="divider">/</span></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create" controller="admin/user"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-user" class="content scaffold-show" role="main">
@@ -54,7 +54,31 @@
 					
 					</dd>
 				</div>
-				</g:if>--%>
+				</g:if>
+			
+				--%><g:if test="${userInstance?.role}">
+				<div class="fieldcontain">
+					<dt><span id="role-label" class="property-label"><g:message code="user.role.label" default="Role" /></span></dt>
+				    <dd>
+					
+						<span class="property-value" aria-labelledby="role-label"><g:fieldValue bean="${userInstance}" field="role"/></span>
+					
+					</dd>
+				</div>
+				</g:if>
+			
+				<g:if test="${userInstance?.articles}">
+				<div class="fieldcontain">
+					<dt><span id="articles-label" class="property-label"><g:message code="user.articles.label" default="Articles" /></span></dt>
+				    <dd>
+					
+						<g:each in="${userInstance.articles}" var="a">
+						<span class="property-value" aria-labelledby="articles-label"><g:link controller="article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+					</dd>
+				</div>
+				</g:if>
 			
 				<g:if test="${userInstance?.dateCreated}">
 				<div class="fieldcontain">

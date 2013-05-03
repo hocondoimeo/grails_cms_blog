@@ -3,7 +3,7 @@ package grails_cms_blog
 class ActiveMenuTagLib {
 	def activeMenu = {attrs -> 
 		def controller = attrs.controller
-		def action = attrs.action?.null
+		def action = attrs.action
 		if (action){
 			if (params.controller == controller && params.action == action){
 				out << 'class="active"'
