@@ -5,6 +5,7 @@ class Category {
 	Date dateCreated
 	Date lastUpdated
 	
+	static hasMany = [article: Article]
     static constraints = {
 		name(blank: false)
     }
