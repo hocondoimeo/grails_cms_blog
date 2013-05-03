@@ -1,3 +1,4 @@
+<%@ page import="grails_cms_blog.Category" %>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -17,19 +18,23 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
 		<r:layoutResources />
+		
 	</head>
 	<body>
-<div class="container">
+	<div class="container">
+	<g:set var="homePage" value="${"http://" + request.getServerName() + ":" + request.getServerPort() +request.getContextPath() + '/';}" />
 			<div class="header">
 				<h1>Grails cms blog - Front end</h1>
 			</div> 
 			<div class="navbar">
   				<div class="navbar-inner">
 					<ul class="nav">
-	  					<li class="active"><a href="#">Home</a></li>
-	  					<li><a href="#">Category</a></li>
-	  					<li><a href="#">Subscribe</a></li>
-	  					<li><g:link action="index" controller="admin">Administrator</g:link></li>	  					
+	  					<li class="active"><a href="${homePage}">Home</a></li>
+	  					<g:each in="${Category.list()}" status="i" var="catInstance">
+	  						<li><g:link action="index" controller="cat" id="${catInstance.id}">${catInstance.name}</g:link></li>
+	  					</g:each>
+	  					<li><g:link action="index" controller="subscribe">Subscribe</g:link></li>
+	  					<li><g:link action="index" controller="admin/index">Administrator</g:link></li>	  					
 					</ul>
 					<form class="navbar-search pull-right" action="">
                       <input type="text" class="search-query span3" placeholder="Search">
@@ -37,6 +42,7 @@
 				</div>
 			</div>
 			<div class="content border">
+			
 				<g:layoutBody/>	
 			</div>
 		</div>	

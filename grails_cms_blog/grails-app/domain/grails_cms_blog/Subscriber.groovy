@@ -16,8 +16,8 @@ class Subscriber {
 	}
 	
 	static public bootstrap(){
-		new Subscriber(email: 'thu.nguyen@kiss-concept.com').save(flush: true)
-		new Subscriber(email: 'duy.ngo@kiss-concept.com').save(flush: true)
+		new Subscriber(email: 'thu.nguye1n@kiss-concept.com').save(flush: true)
+		new Subscriber(email: 'duy.ngo1@kiss-concept.com').save(flush: true)
 		new Subscriber(email: 'thu1.nguyen@kiss-concept.com').save(flush: true)
 		new Subscriber(email: 'thu2.nguyen@kiss-concept.com').save(flush: true)
 		new Subscriber(email: 'thu3.nguyen@kiss-concept.com').save(flush: true)
