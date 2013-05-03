@@ -1,7 +1,4 @@
-import grails_cms_blog.Article
-import grails_cms_blog.Category
-import grails_cms_blog.Subscriber
-import grails_cms_blog.User
+import grails_cms_blog.*
 
 class BootStrap {
 

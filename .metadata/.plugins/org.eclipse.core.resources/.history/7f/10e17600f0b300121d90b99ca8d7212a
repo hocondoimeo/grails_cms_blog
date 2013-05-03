@@ -1,0 +1,123 @@
+
+<%@ page import="grails_cms_blog.Article" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="layout" content="admin">
+		<g:set var="entityName" value="${message(code: 'article.label', default: 'Article')}" />
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
+	</head>
+	<body>
+		<a href="#list-article" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div role="navigation">
+			<ul class="breadcrumb">
+				<li><a class="home" href="${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
+				<li><g:link class="create" action="create" controller="admin/article"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
+		</div>
+		<div id="list-article" class="content scaffold-list" role="main">
+			<h1 class="tittle"><g:message code="default.list.label" args="[entityName]" /></h1>
+			<div id="search">
+			  <g:form url='[controller: "articleAdmin", action: "list"]'
+			          id="searchableForm"
+			          name="searchableForm"
+			          method="get">
+			    <g:textField name="q" value="${params.q}" />
+			    <input type="submit" value="Search" />
+			  </g:form>
+			</div>
+			<g:if test="${flash.message}">
+			<div class="alert" role="status">${flash.message}</div>
+			</g:if>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+					
+						<g:sortableColumn property="title" title="${message(code: 'article.title.label', default: 'Title')}" />
+					
+						<g:sortableColumn property="desc" title="${message(code: 'article.desc.label', default: 'Desc')}" />
+					
+						<g:sortableColumn property="author" title="${message(code: 'article.author.label', default: 'Author')}" />
+					
+						<g:sortableColumn property="category" title="${message(code: 'article.category.label', default: 'Category')}" />
+					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'article.dateCreated.label', default: 'Date Created')}" />
+					
+						<g:sortableColumn property="lastUpdated" title="${message(code: 'article.lastUpdated.label', default: 'Last Updated')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+					<g:if test="${articleInstanceList}">
+						<g:set var="articles" value="${articleInstanceList}" />
+						<g:set var="articlesTotal" value="${articleInstanceTotal}" />
+					</g:if>
+					<g:else>
+						<g:set var="articles" value="${searchResult.results}" />
+						<g:set var="articlesTotal" value="${searchResult.total}" />
+						<g:if test="${haveQuery && !haveResults && !parseException}">
+      <p>Nothing matched your query - <strong>${params.q}</strong></p>
+      <g:if test="${!searchResult?.suggestedQuery}">
+        <p>Suggestions:</p>
+        <ul>
+          <li>Try a suggested query: <g:link controller="searchable" action="index" params="[q: params.q, suggestQuery: true]">Search again with the <strong>suggestQuery</strong> option</g:link><br />
+            <em>Note: Suggestions are only available when classes are mapped with <strong>spellCheck</strong> options, either at the class or property level.<br />
+		The simplest way to do this is add <strong>spellCheck "include"</strong> to the domain class searchable mapping closure.<br />
+                See the plugin/Compass documentation Mapping sections for details.</em>
+          </li>
+        </ul>
+      </g:if>
+    </g:if>
+
+    <g:if test="${searchResult?.suggestedQuery}">
+      <p>Did you mean <g:link controller="searchable" action="index" params="[q: searchResult.suggestedQuery]">${StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)}</g:link>?</p>
+    </g:if>
+
+    <g:if test="${parseException}">
+      <p>Your query - <strong>${params.q}</strong> - is not valid.</p>
+      <p>Suggestions:</p>
+      <ul>
+        <li>Fix the query: see <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">Lucene query syntax</a> for examples</li>
+        <g:if test="${LuceneUtils.queryHasSpecialCharacters(params.q)}">
+          <li>Remove special characters like <strong>" - [ ]</strong>, before searching, eg, <em><strong>${LuceneUtils.cleanQuery(params.q)}</strong></em><br />
+              <em>Use the Searchable Plugin's <strong>LuceneUtils#cleanQuery</strong> helper method for this: <g:link controller="searchable" action="index" params="[q: LuceneUtils.cleanQuery(params.q)]">Search again with special characters removed</g:link></em>
+          </li>
+          <li>Escape special characters like <strong>" - [ ]</strong> with <strong>\</strong>, eg, <em><strong>${LuceneUtils.escapeQuery(params.q)}</strong></em><br />
+              <em>Use the Searchable Plugin's <strong>LuceneUtils#escapeQuery</strong> helper method for this: <g:link controller="searchable" action="index" params="[q: LuceneUtils.escapeQuery(params.q)]">Search again with special characters escaped</g:link></em><br />
+              <em>Or use the Searchable Plugin's <strong>escape</strong> option: <g:link controller="searchable" action="index" params="[q: params.q, escape: true]">Search again with the <strong>escape</strong> option enabled</g:link></em>
+          </li>
+        </g:if>
+      </ul>
+    </g:if>
+					</g:else>
+					<g:each in="${articles}" status="i" var="articleInstance">
+						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+						
+							<td><g:link action="show" controller="admin/article" id="${articleInstance.id}">${fieldValue(bean: articleInstance, field: "title")}</g:link></td>
+						
+							<td>${fieldValue(bean: articleInstance, field: "desc")}</td>
+							<g:if test="${session.user.role == "admin"}">
+								<td><g:link controller="admin/user" action="show" id="${articleInstance?.author?.id}">${articleInstance?.author?.encodeAsHTML()}</g:link></td>
+							</g:if>
+							<g:else>
+								<td>${fieldValue(bean: articleInstance, field: "author")}</td>
+							</g:else>
+						
+							<%--<td>${fieldValue(bean: articleInstance, field: "category")}</td>--%>
+							
+							<td><g:link controller="admin/category" action="show" id="${articleInstance?.category?.id}">${articleInstance?.category?.encodeAsHTML()}</g:link></td>
+						
+							<td><g:formatDate date="${articleInstance.dateCreated}" /></td>
+						
+							<td><g:formatDate date="${articleInstance.lastUpdated}" /></td>
+						
+						</tr>
+					</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${articlesTotal}" />
+			</div>
+		</div>
+	</body>
+</html>

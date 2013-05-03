@@ -1,9 +1,13 @@
 package grails_cms_blog.admin
 
 import grails_cms_blog.Article
+import grails_cms_blog.User
+
+import org.compass.core.engine.SearchEngineQueryParseException
 import org.springframework.dao.DataIntegrityViolationException
 
 class ArticleAdminController {
+	def searchableService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -12,8 +16,19 @@ class ArticleAdminController {
     }
 
     def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [articleInstanceList: Article.list(params), articleInstanceTotal: Article.count()]
+		if(params.q){
+			if (!params.q?.trim()) {
+				[:]
+			  }
+			  try {
+				[searchResult: searchableService.search(params.q, params)]
+			  } catch (SearchEngineQueryParseException ex) {
+				[parseException: true]
+			  }
+		}else{
+	        params.max = Math.min(max ?: 10, 100)
+	        [articleInstanceList: Article.list(params), articleInstanceTotal: Article.count()]
+		}
     }
 
     def create() {
@@ -22,6 +37,22 @@ class ArticleAdminController {
 
     def save() {
         def articleInstance = new Article(params)
+		articleInstance.author = User.get(session.user.id)
+		//handle uploaded file
+		def uploadedFile = request.getFile('image')
+		if(!uploadedFile.empty){
+		  println "Class: ${uploadedFile.class}"
+		  println "Name: ${uploadedFile.name}"
+		  println "OriginalFileName: ${uploadedFile.originalFilename}"
+		  println "Size: ${uploadedFile.size}"
+		  println "ContentType: ${uploadedFile.contentType}"
+		  
+		  def webRootDir = servletContext.getRealPath("/")
+		  def userDir = new File(webRootDir, "images/article/${session.user.name}")
+		  userDir.mkdirs()
+		  uploadedFile.transferTo( new File( userDir, uploadedFile.originalFilename))
+		  articleInstance.image = uploadedFile.originalFilename
+		}
         if (!articleInstance.save(flush: true)) {
             render(view: "create", model: [articleInstance: articleInstance])
             return

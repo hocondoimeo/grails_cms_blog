@@ -44,6 +44,23 @@
 					</dd>
 				</div>
 				</g:if>
+				
+				<g:if test="${articleInstance?.image}">
+					<div class="fieldcontain">
+						<dt><span id="image-label" class="property-label"><g:message code="article.image.label" default="Image" /></span></dt>
+					    <dd>
+						
+							<span class="property-value" aria-labelledby="image-label">
+								<%--<img src="${createLinkTo(dir:'web-app/images/article/'+articleInstance.author.name,
+						                               file:''+articleInstance.image)}"
+						           alt="${articleInstance.image}"
+						           title="${articleInstance.image}" />--%>
+						         	<g:displayFile filename="${articleInstance.image}" user="${articleInstance.author.name}" />
+					        </span>
+						
+						</dd>
+					 </div>
+				  </g:if>
 			
 				<g:if test="${articleInstance?.content}">
 				<div class="fieldcontain">
@@ -89,12 +106,19 @@
 				</div>
 				</g:if>
 			
-				<g:if test="${articleInstance?.user}">
+				<g:if test="${articleInstance?.author}">
 				<div class="fieldcontain">
-					<dt><span id="user-label" class="property-label"><g:message code="article.user.label" default="User" /></span></dt>
+					<dt><span id="author-label" class="property-label"><g:message code="article.author.label" default="Author" /></span></dt>
 				    <dd>
 					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="admin/user" action="show" id="${articleInstance?.user?.id}">${articleInstance?.user?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="author-label">
+							<g:if test="${session.user.role == "admin"}">
+								<g:link controller="admin/user" action="show" id="${articleInstance?.author?.id}">${articleInstance?.author?.encodeAsHTML()}</g:link>
+							</g:if>
+							<g:else>
+								<g:fieldValue bean="${articleInstance}" field="author"/>
+							</g:else>
+						</span>
 					
 					</dd>
 				</div>

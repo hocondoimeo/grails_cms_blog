@@ -1,7 +1,5 @@
 <%@ page import="grails_cms_blog.Article" %>
 
-
-
 <div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'title', 'error')} required">
 	<label for="title" class="control-label">
 		<g:message code="article.title.label" default="Title" />
@@ -19,6 +17,16 @@
 	</label>
 	<div class="controls">
 		<g:textField name="desc" maxlength="100" required="" value="${articleInstance?.desc}"/>
+	</div>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'image', 'error')} required">
+	<label for="image" class="control-label">
+		<g:message code="article.content.label" default="File" />
+		<span class="required-indicator">*</span>
+	</label>
+	<div class="controls">
+		<input type="file" id="image" name="image"/>
 	</div>
 </div>
 
@@ -42,8 +50,7 @@
 	</div>
 </div>
 
-<g:if test="${session.user}">
-<div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'user', 'error')} required">
+<%--<div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'user', 'error')} required">
 	<label for="user" class="control-label">
 		<g:message code="article.user.label" default="User" />
 		<span class="required-indicator">*</span>
@@ -52,5 +59,4 @@
 		<g:select id="user" name="user.id" from="${grails_cms_blog.User.list()}" optionKey="id" required="" value="${articleInstance?.user?.id}" class="many-to-one"/>
 	</div>
 </div>
-</g:if>
-
+--%>
