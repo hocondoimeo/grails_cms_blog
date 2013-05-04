@@ -34,11 +34,15 @@
 	  						<li><g:link action="index" controller="cat" id="${catInstance.id}">${catInstance.name}</g:link></li>
 	  					</g:each>
 	  					<li><g:link action="index" controller="subscribe">Subscribe</g:link></li>
-	  					<li><g:link action="index" controller="admin/index">Administrator</g:link></li>	  					
+	  					<li><g:link controller="admin/index">Administrator</g:link></li>	  					
 					</ul>
-					<form class="navbar-search pull-right" action="">
-                      <input type="text" class="search-query span3" placeholder="Search">
-                    </form>
+					<g:form class="navbar-search pull-right" 
+						url='[controller: "index", action: "search"]'
+						id="searchableForm"
+				        name="searchableForm"
+				        method="get">
+                      <g:textField type="text" class="search-query span3" placeholder="Search" name="q" value="${params.q}"/>
+                    </g:form>
 				</div>
 			</div>
 			<div class="content border">

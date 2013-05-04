@@ -1,0 +1,63 @@
+<%@ page import="grails_cms_blog.User" %>
+
+
+
+<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
+	<label for="name" class="control-label">
+		<g:message code="user.name.label" default="Name" />
+		<span class="required-indicator">*</span>
+	</label>
+	<div class="controls">
+		<g:textField name="name" maxlength="30" pattern="${userInstance.constraints.name.matches}" required="" value="${userInstance?.name}"/>
+	</div>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
+	<label for="email" class="control-label">
+		<g:message code="user.email.label" default="Email" />
+		<span class="required-indicator">*</span>
+	</label>
+	<div class="controls">
+		<g:field type="email" name="email" required="" value="${userInstance?.email}"/>
+	</div>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+	<label for="password" class="control-label">
+		<g:message code="user.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<div class="controls">
+		<g:field type="password" name="password" required="" value="${userInstance?.password}"/>
+	</div>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'role', 'error')} ">
+	<label for="role" class="control-label">
+		<g:message code="user.role.label" default="Role" />
+		
+	</label>
+	<div class="controls">
+		<g:select name="role" from="${userInstance.constraints.role.inList}" value="${userInstance?.role}" valueMessagePrefix="user.role" noSelection="['': '']"/>
+	</div>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'articles', 'error')} ">
+	<label for="articles" class="control-label">
+		<g:message code="user.articles.label" default="Articles" />
+		
+	</label>
+	<div class="controls">
+		
+<ul class="one-to-many">
+<g:each in="${userInstance?.articles?}" var="a">
+    <li><g:link controller="article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="admin/article" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'article.label', default: 'Article')])}</g:link>
+</li>
+</ul>
+
+	</div>
+</div>
+

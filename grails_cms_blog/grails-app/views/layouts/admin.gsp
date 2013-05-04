@@ -33,6 +33,7 @@
 	  					<li <g:activeMenu controller="userAdmin"></g:activeMenu> ><g:link action="index" controller="admin/user">User</g:link></li>
 	  					<li <g:activeMenu controller="subscriberAdmin"></g:activeMenu> ><g:link action="index" controller="admin/subscriber">Subscriber</g:link></li>
 	  					<li <g:activeMenu controller="systemAdmin"></g:activeMenu>><g:link action="index" controller="admin/system">System</g:link></li>
+	  					<li><g:link action="index" controller="index">Blog</g:link></li>
 	  					</g:if>
 					</ul>
 					<ul class="nav pull-right">

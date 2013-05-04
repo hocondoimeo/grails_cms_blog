@@ -1,5 +1,7 @@
 <%@ page import="grails_cms_blog.Article" %>
 
+<input type="hidden" name="user.id" value="${userId}" />
+
 <div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'title', 'error')} required">
 	<label for="title" class="control-label">
 		<g:message code="article.title.label" default="Title" />
@@ -29,7 +31,6 @@
 		<input type="file" id="image" name="image"/>
 	</div>
 </div>
-
 <div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'content', 'error')} required">
 	<label for="content" class="control-label">
 		<g:message code="article.content.label" default="Content" />

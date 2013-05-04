@@ -31,13 +31,16 @@ class ArticleAdminController {
 		}
     }
 
-    def create() {
-        [articleInstance: new Article(params)]
+    def create() { 
+        [articleInstance: new Article(params), userId : params.user.id]
     }
 
     def save() {
         def articleInstance = new Article(params)
-		articleInstance.author = User.get(session.user.id)
+		if(params.user.id)
+			articleInstance.author = User.get(params.user.id)
+		else
+			articleInstance.author = User.get(session.user.id)
 		//handle uploaded file
 		def uploadedFile = request.getFile('image')
 		if(!uploadedFile.empty){
@@ -48,7 +51,7 @@ class ArticleAdminController {
 		  println "ContentType: ${uploadedFile.contentType}"
 		  
 		  def webRootDir = servletContext.getRealPath("/")
-		  def userDir = new File(webRootDir, "images/article/${session.user.name}")
+		  def userDir = new File(webRootDir, "images/article/${articleInstance.author}")
 		  userDir.mkdirs()
 		  uploadedFile.transferTo( new File( userDir, uploadedFile.originalFilename))
 		  articleInstance.image = uploadedFile.originalFilename

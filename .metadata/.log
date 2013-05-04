@@ -10258,3 +10258,1375 @@ Contains: ------System.err:-----------
 !SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:25:55.446
 !MESSAGE ------System.err:-----------
 
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 09:26:21.857
+!MESSAGE Problem executing: -Dserver.port=9191 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: The command '/usr/lib/jvm/java-6-openjdk/bin/java (May 4, 2013 9:06:21 AM)' was terminated because it didn't produce new output for some time.
+
+See details for the output produced so far.
+
+If you think the command simply needed more time, you can increase the time limit in the Grails preferences page.
+
+See menu Windows >> Preferences >> Grails >> Launch
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:9191/grails_cms_blog
+
+Contains: ------System.err:-----------
+
+Terminating process: Timeout: no new output for 600000 milliseconds
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 09:26:21.857
+!MESSAGE The command '/usr/lib/jvm/java-6-openjdk/bin/java (May 4, 2013 9:06:21 AM)' was terminated because it didn't produce new output for some time.
+
+See details for the output produced so far.
+
+If you think the command simply needed more time, you can increase the time limit in the Grails preferences page.
+
+See menu Windows >> Preferences >> Grails >> Launch
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:26:21.857
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:9191/grails_cms_blog
+
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:26:21.857
+!MESSAGE ------System.err:-----------
+
+Terminating process: Timeout: no new output for 600000 milliseconds
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 09:50:09.299
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: The command '/usr/lib/jvm/java-6-openjdk/bin/java (May 4, 2013 9:30:08 AM)' was terminated because it didn't produce new output for some time.
+
+See details for the output produced so far.
+
+If you think the command simply needed more time, you can increase the time limit in the Grails preferences page.
+
+See menu Windows >> Preferences >> Grails >> Launch
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 09:31:17,408 [http-bio-8181-exec-4] ERROR [/grails_cms_blog].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/grails_cms_blog] threw exception
+Message: Error applying layout : admin
+    Line | Method
+->> 1146 | runWorker in /grails-app/views/layouts/admin.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    615 | run       in     ''
+^    679 | run . . . in     ''
+Caused by GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:link>: Unable to create URL for mapping [/(*)/(*)?/(*)?] and parameters [{action=index}]. Parameter [controller] is required, but was not specified!
+->>  464 | runWorker in /grails-app/views/layouts/admin.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:link>: Unable to create URL for mapping [/(*)/(*)?/(*)?] and parameters [{action=index}]. Parameter [controller] is required, but was not specified!
+->>   36 | doCall    in /grails-app/views/layouts/admin.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by UrlMappingException: Unable to create URL for mapping [/(*)/(*)?/(*)?] and parameters [{action=index}]. Parameter [controller] is required, but was not specified!
+->>   36 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_admin_gsp$_run_closure2
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     52 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_admin_gsp
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+| Error 2013-05-04 09:31:17,880 [http-bio-8181-exec-4] ERROR [/grails_cms_blog].[grails-errorhandler]  - Servlet.service() for servlet grails-errorhandler threw exception
+Message: Error applying layout : main
+    Line | Method
+->> 1146 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    615 | run       in     ''
+^    679 | run . . . in     ''
+Caused by GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>  464 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>   50 | doCall    in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by IllegalArgumentException: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->> 1151 | addDispositionToRequest in org.grails.plugin.resource.ResourceProcessor
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   1173 | addModuleDispositionsToRequest in     ''
+|    119 | declareModuleRequiredByPage in org.grails.plugin.resource.ResourceTagLib
+|    293 | doCall    in org.grails.plugin.resource.ResourceTagLib$_closure5_closure16
+|    289 | doCall .  in org.grails.plugin.resource.ResourceTagLib$_closure5
+|     50 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp$_run_closure2
+|     52 | run . . . in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+| Error 2013-05-04 09:31:17,889 [http-bio-8181-exec-4] ERROR [Tomcat].[localhost]  - Exception Processing ErrorPage[errorCode=500, location=/grails-errorhandler]
+Message: Error applying layout : main
+    Line | Method
+->> 1146 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    615 | run       in     ''
+^    679 | run . . . in     ''
+Caused by GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>  464 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>   50 | doCall    in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by IllegalArgumentException: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->> 1151 | addDispositionToRequest in org.grails.plugin.resource.ResourceProcessor
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   1173 | addModuleDispositionsToRequest in     ''
+|    119 | declareModuleRequiredByPage in org.grails.plugin.resource.ResourceTagLib
+|    293 | doCall    in org.grails.plugin.resource.ResourceTagLib$_closure5_closure16
+|    289 | doCall .  in org.grails.plugin.resource.ResourceTagLib$_closure5
+|     50 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp$_run_closure2
+|     52 | run . . . in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+Contains: ------System.err:-----------
+
+Terminating process: Timeout: no new output for 600000 milliseconds
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 09:50:09.299
+!MESSAGE The command '/usr/lib/jvm/java-6-openjdk/bin/java (May 4, 2013 9:30:08 AM)' was terminated because it didn't produce new output for some time.
+
+See details for the output produced so far.
+
+If you think the command simply needed more time, you can increase the time limit in the Grails preferences page.
+
+See menu Windows >> Preferences >> Grails >> Launch
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:50:09.299
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 09:31:17,408 [http-bio-8181-exec-4] ERROR [/grails_cms_blog].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/grails_cms_blog] threw exception
+Message: Error applying layout : admin
+    Line | Method
+->> 1146 | runWorker in /grails-app/views/layouts/admin.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    615 | run       in     ''
+^    679 | run . . . in     ''
+Caused by GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:link>: Unable to create URL for mapping [/(*)/(*)?/(*)?] and parameters [{action=index}]. Parameter [controller] is required, but was not specified!
+->>  464 | runWorker in /grails-app/views/layouts/admin.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:link>: Unable to create URL for mapping [/(*)/(*)?/(*)?] and parameters [{action=index}]. Parameter [controller] is required, but was not specified!
+->>   36 | doCall    in /grails-app/views/layouts/admin.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by UrlMappingException: Unable to create URL for mapping [/(*)/(*)?/(*)?] and parameters [{action=index}]. Parameter [controller] is required, but was not specified!
+->>   36 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_admin_gsp$_run_closure2
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     52 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_admin_gsp
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+| Error 2013-05-04 09:31:17,880 [http-bio-8181-exec-4] ERROR [/grails_cms_blog].[grails-errorhandler]  - Servlet.service() for servlet grails-errorhandler threw exception
+Message: Error applying layout : main
+    Line | Method
+->> 1146 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    615 | run       in     ''
+^    679 | run . . . in     ''
+Caused by GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>  464 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>   50 | doCall    in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by IllegalArgumentException: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->> 1151 | addDispositionToRequest in org.grails.plugin.resource.ResourceProcessor
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   1173 | addModuleDispositionsToRequest in     ''
+|    119 | declareModuleRequiredByPage in org.grails.plugin.resource.ResourceTagLib
+|    293 | doCall    in org.grails.plugin.resource.ResourceTagLib$_closure5_closure16
+|    289 | doCall .  in org.grails.plugin.resource.ResourceTagLib$_closure5
+|     50 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp$_run_closure2
+|     52 | run . . . in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+| Error 2013-05-04 09:31:17,889 [http-bio-8181-exec-4] ERROR [Tomcat].[localhost]  - Exception Processing ErrorPage[errorCode=500, location=/grails-errorhandler]
+Message: Error applying layout : main
+    Line | Method
+->> 1146 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    615 | run       in     ''
+^    679 | run . . . in     ''
+Caused by GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>  464 | runWorker in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:javascript>: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->>   50 | doCall    in /grails-app/views/layouts/main.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by IllegalArgumentException: Cannot add resource with disposition [defer] to this request - 
+that disposition has already been rendered. Check that your r:layoutResources tag comes after all
+other Resource tags that add content to that disposition.
+->> 1151 | addDispositionToRequest in org.grails.plugin.resource.ResourceProcessor
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   1173 | addModuleDispositionsToRequest in     ''
+|    119 | declareModuleRequiredByPage in org.grails.plugin.resource.ResourceTagLib
+|    293 | doCall    in org.grails.plugin.resource.ResourceTagLib$_closure5_closure16
+|    289 | doCall .  in org.grails.plugin.resource.ResourceTagLib$_closure5
+|     50 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp$_run_closure2
+|     52 | run . . . in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_layouts_main_gsp
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:50:09.299
+!MESSAGE ------System.err:-----------
+
+Terminating process: Timeout: no new output for 600000 milliseconds
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 09:51:53.430
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 2 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 09:51:10,485 [http-bio-8181-exec-7] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/index/search - parameters:
+q: sds
+No such property: searchableService for class: grails_cms_blog.IndexController. Stacktrace follows:
+Message: No such property: searchableService for class: grails_cms_blog.IndexController
+    Line | Method
+->>   13 | doCall    in grails_cms_blog.IndexController$_closure1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+| Error 2013-05-04 09:51:50,671 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/index/search - parameters:
+q: sds
+No such property: searchableService for class: grails_cms_blog.IndexController. Stacktrace follows:
+Message: No such property: searchableService for class: grails_cms_blog.IndexController
+    Line | Method
+->>   13 | doCall    in grails_cms_blog.IndexController$_closure1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 09:51:53.430
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:51:53.430
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 2 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 09:51:10,485 [http-bio-8181-exec-7] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/index/search - parameters:
+q: sds
+No such property: searchableService for class: grails_cms_blog.IndexController. Stacktrace follows:
+Message: No such property: searchableService for class: grails_cms_blog.IndexController
+    Line | Method
+->>   13 | doCall    in grails_cms_blog.IndexController$_closure1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+| Error 2013-05-04 09:51:50,671 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/index/search - parameters:
+q: sds
+No such property: searchableService for class: grails_cms_blog.IndexController. Stacktrace follows:
+Message: No such property: searchableService for class: grails_cms_blog.IndexController
+    Line | Method
+->>   13 | doCall    in grails_cms_blog.IndexController$_closure1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:51:53.430
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 09:55:36.491
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 09:53:26,189 [http-bio-8181-exec-12] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /grails_cms_blog/index/search - parameters:
+suggestQuery: true
+q: test
+Cannot invoke method highlightTermDiffs() on null object. Stacktrace follows:
+Message: Error processing GroovyPageView: Error executing tag <g:link>: Error evaluating expression [StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)] on line [38]: Cannot invoke method highlightTermDiffs() on null object
+    Line | Method
+->>  464 | doFilter  in /grails-app/views/index/search.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:link>: Error evaluating expression [StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)] on line [38]: Cannot invoke method highlightTermDiffs() on null object
+->>   38 | doCall    in /grails-app/views/index/search.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GroovyPagesException: Error evaluating expression [StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)] on line [38]: Cannot invoke method highlightTermDiffs() on null object
+->>   38 | doCall    in /grails-app/views/index/search.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by NullPointerException: Cannot invoke method highlightTermDiffs() on null object
+->>   38 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_index_search_gsp$_run_closure2_closure19_closure57
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     85 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_index_search_gsp
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 09:55:36.491
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:55:36.491
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 09:53:26,189 [http-bio-8181-exec-12] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /grails_cms_blog/index/search - parameters:
+suggestQuery: true
+q: test
+Cannot invoke method highlightTermDiffs() on null object. Stacktrace follows:
+Message: Error processing GroovyPageView: Error executing tag <g:link>: Error evaluating expression [StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)] on line [38]: Cannot invoke method highlightTermDiffs() on null object
+    Line | Method
+->>  464 | doFilter  in /grails-app/views/index/search.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:link>: Error evaluating expression [StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)] on line [38]: Cannot invoke method highlightTermDiffs() on null object
+->>   38 | doCall    in /grails-app/views/index/search.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GroovyPagesException: Error evaluating expression [StringQueryUtils.highlightTermDiffs(params.q.trim(), searchResult.suggestedQuery)] on line [38]: Cannot invoke method highlightTermDiffs() on null object
+->>   38 | doCall    in /grails-app/views/index/search.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by NullPointerException: Cannot invoke method highlightTermDiffs() on null object
+->>   38 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_index_search_gsp$_run_closure2_closure19_closure57
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     85 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_index_search_gsp
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 09:55:36.491
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:05:10.370
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: download.jpg
+Size: 7482
+ContentType: image/jpeg
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:05:10.371
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:05:10.371
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: download.jpg
+Size: 7482
+ContentType: image/jpeg
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:05:10.371
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:25:13.505
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:06:40,688 [http-bio-8181-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdas</p>
+title: test11111
+desc: IT desc sdsdsds
+category.id: 1
+create: Create
+Cannot get property 'id' on null object. Stacktrace follows:
+Message: Cannot get property 'id' on null object
+    Line | Method
+->>   40 | save      in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+| Error 2013-05-04 10:23:39,417 [http-bio-8181-exec-11] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc. Stacktrace follows:
+Message: Error processing GroovyPageView: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+    Line | Method
+->>  464 | doFilter  in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>   41 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:render>: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>   32 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GroovyPagesException: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>    3 | run       in /grails-app/views/articleAdmin/_form.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by MissingPropertyException: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>    3 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin__form_gsp$_run_closure1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     32 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2_closure25
+|     41 | doCall .  in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2
+|     43 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:25:13.505
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:25:13.505
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:06:40,688 [http-bio-8181-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdas</p>
+title: test11111
+desc: IT desc sdsdsds
+category.id: 1
+create: Create
+Cannot get property 'id' on null object. Stacktrace follows:
+Message: Cannot get property 'id' on null object
+    Line | Method
+->>   40 | save      in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+| Error 2013-05-04 10:23:39,417 [http-bio-8181-exec-11] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc. Stacktrace follows:
+Message: Error processing GroovyPageView: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+    Line | Method
+->>  464 | doFilter  in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>   41 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:render>: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>   32 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GroovyPagesException: Error evaluating expression [articleInstance.user.id] on line [3]: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>    3 | run       in /grails-app/views/articleAdmin/_form.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by MissingPropertyException: No such property: user for class: grails_cms_blog.Article
+Possible solutions: desc
+->>    3 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin__form_gsp$_run_closure1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     32 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2_closure25
+|     41 | doCall .  in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2
+|     43 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:25:13.505
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:26:59.834
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:26:31,053 [http-bio-8181-exec-1] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController. Stacktrace follows:
+Message: No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController
+    Line | Method
+->>   36 | create    in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:26:59.834
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:26:59.835
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:26:31,053 [http-bio-8181-exec-1] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController. Stacktrace follows:
+Message: No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController
+    Line | Method
+->>   36 | create    in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:26:59.835
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:29:30.660
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:28:23,536 [http-bio-8181-exec-4] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController. Stacktrace follows:
+Message: No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController
+    Line | Method
+->>   37 | create    in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:29:30.660
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:29:30.660
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:28:23,536 [http-bio-8181-exec-4] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController. Stacktrace follows:
+Message: No such property: articleInstance for class: grails_cms_blog.admin.ArticleAdminController
+    Line | Method
+->>   37 | create    in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:29:30.660
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:30:58.174
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:30:22,577 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     37 | create            in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:30:58.174
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:30:58.174
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:30:22,577 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     37 | create            in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:30:58.174
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:37:07.709
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:32:02,957 [http-bio-8181-exec-5] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     37 | create            in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:37:07.710
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:37:07.710
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:32:02,957 [http-bio-8181-exec-5] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     37 | create            in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:37:07.710
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:39:15.440
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+2
+| Error 2013-05-04 10:38:01,734 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     38 | create            in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:39:15.440
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:39:15.440
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+2
+| Error 2013-05-04 10:38:01,734 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     38 | create            in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:39:15.440
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:46:06.879
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:41:11,663 [http-bio-8181-exec-3] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdasd</p>
+title: asdasdas 1111
+desc: IT  saasdasdas
+category.id: 1
+user.id: author
+create: Create
+Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+Message: Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String
+    Line | Method
+->>   44 | save      in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:46:06.880
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:46:06.880
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:41:11,663 [http-bio-8181-exec-3] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdasd</p>
+title: asdasdas 1111
+desc: IT  saasdasdas
+category.id: 1
+user.id: author
+create: Create
+Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+Message: Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String
+    Line | Method
+->>   44 | save      in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:46:06.880
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:48:37.104
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+author
+| Error 2013-05-04 10:47:13,435 [http-bio-8181-exec-2] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdas</p>
+title: dasdasdas
+desc: asdasdasdasdas
+category.id: 1
+user.id: author
+create: Create
+Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+Message: Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String
+    Line | Method
+->>   45 | save      in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:48:37.105
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:48:37.105
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+author
+| Error 2013-05-04 10:47:13,435 [http-bio-8181-exec-2] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdas</p>
+title: dasdasdas
+desc: asdasdasdasdas
+category.id: 1
+user.id: author
+create: Create
+Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+Message: Provided id of the wrong type for class grails_cms_blog.User. Expected: class java.lang.Long, got class java.lang.String
+    Line | Method
+->>   45 | save      in grails_cms_blog.admin.ArticleAdminController
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run . . . in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run       in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:48:37.105
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:49:53.126
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:49:26,898 [http-bio-8181-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+Cannot get property 'constraints' on null object. Stacktrace follows:
+Message: Error processing GroovyPageView: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+    Line | Method
+->>  464 | doFilter  in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+->>   41 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:render>: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+->>   32 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GroovyPagesException: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+->>   11 | run       in /grails-app/views/articleAdmin/_form.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by NullPointerException: Cannot get property 'constraints' on null object
+->>   11 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin__form_gsp$_run_closure7
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     32 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2_closure25
+|     41 | doCall .  in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2
+|     43 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:49:53.126
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:49:53.126
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:49:26,898 [http-bio-8181-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /grails_cms_blog/admin/article/create - parameters:
+user.id: 2
+Cannot get property 'constraints' on null object. Stacktrace follows:
+Message: Error processing GroovyPageView: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+    Line | Method
+->>  464 | doFilter  in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:uploadForm>: Error executing tag <g:render>: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+->>   41 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GrailsTagException: Error executing tag <g:render>: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+->>   32 | doCall    in /grails-app/views/articleAdmin/create.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by GroovyPagesException: Error evaluating expression [articleInstance.constraints.title.matches] on line [11]: Cannot get property 'constraints' on null object
+->>   11 | run       in /grails-app/views/articleAdmin/_form.gsp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Caused by NullPointerException: Cannot get property 'constraints' on null object
+->>   11 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin__form_gsp$_run_closure7
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|     32 | doCall    in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2_closure25
+|     41 | doCall .  in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp$_run_closure2
+|     43 | run       in root_Git_grails_cms_blog_grails_cms_blog_grails_app_views_articleAdmin_create_gsp
+|    195 | doFilter  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter  in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker in java.util.concurrent.ThreadPoolExecutor
+|    615 | run       in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:49:53.126
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:54:14.423
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:52:25,644 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdasdas</p>
+author: author
+title: asdasdas
+desc: asdasasasdasdas
+category.id: 1
+create: Create
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     44 | save              in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:54:14.424
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:54:14.424
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+| Error 2013-05-04 10:52:25,644 [http-bio-8181-exec-8] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /grails_cms_blog/articleAdmin/save - parameters:
+content: <p>
+	asdasdasdasdasdas</p>
+author: author
+title: asdasdas
+desc: asdasasasdasdas
+category.id: 1
+create: Create
+argument type mismatch. Stacktrace follows:
+Message: argument type mismatch
+    Line | Method
+->> 2170 | invokeMethod      in org.apache.commons.beanutils.PropertyUtilsBean
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+|   2151 | setSimpleProperty in     ''
+|   1957 | setNestedProperty in     ''
+|   2064 | setProperty       in     ''
+|    858 | setProperty . . . in org.apache.commons.beanutils.PropertyUtils
+|     44 | save              in grails_cms_blog.admin.ArticleAdminController
+|    195 | doFilter . . . .  in grails.plugin.cache.web.filter.PageFragmentCachingFilter
+|     63 | doFilter          in grails.plugin.cache.web.filter.AbstractFilter
+|   1146 | runWorker . . . . in java.util.concurrent.ThreadPoolExecutor
+|    615 | run               in java.util.concurrent.ThreadPoolExecutor$Worker
+^    679 | run . . . . . . . in java.lang.Thread
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:54:14.424
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 10:58:40.653
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: download.jpg
+Size: 7482
+ContentType: image/jpeg
+| Error 2013-05-04 10:55:18,665 [http-bio-8181-exec-3] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+| Error 2013-05-04 10:55:19,086 [http-bio-8181-exec-4] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+| Error 2013-05-04 10:56:59,904 [http-bio-8181-exec-5] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+| Error 2013-05-04 10:57:00,115 [http-bio-8181-exec-5] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 10:58:40.653
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:58:40.653
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: download.jpg
+Size: 7482
+ContentType: image/jpeg
+| Error 2013-05-04 10:55:18,665 [http-bio-8181-exec-3] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+| Error 2013-05-04 10:55:19,086 [http-bio-8181-exec-4] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+| Error 2013-05-04 10:56:59,904 [http-bio-8181-exec-5] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+| Error 2013-05-04 10:57:00,115 [http-bio-8181-exec-5] ERROR resource.ResourceMeta  - Resource not found: /images/article/author/download.jpg
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 10:58:40.653
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 11:03:56.470
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: download.jpg
+Size: 7482
+ContentType: image/jpeg
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: 220px-Einstein_1921_portrait2.jpg
+Size: 13249
+ContentType: image/jpeg
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 11:03:56.471
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:03:56.471
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: download.jpg
+Size: 7482
+ContentType: image/jpeg
+Class: class org.springframework.web.multipart.commons.CommonsMultipartFile
+Name: image
+OriginalFileName: 220px-Einstein_1921_portrait2.jpg
+Size: 13249
+ContentType: image/jpeg
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:03:56.471
+!MESSAGE ------System.err:-----------
+

@@ -71,11 +71,14 @@
 				<div class="fieldcontain">
 					<dt><span id="articles-label" class="property-label"><g:message code="user.articles.label" default="Articles" /></span></dt>
 				    <dd>
-					
+						<ul class="one-to-many">
 						<g:each in="${userInstance.articles}" var="a">
-						<span class="property-value" aria-labelledby="articles-label"><g:link controller="article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="articles-label">
+						<%--<g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link>--%>
+						<li><g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+						</span>
 						</g:each>
-					
+						</ul>
 					</dd>
 				</div>
 				</g:if>

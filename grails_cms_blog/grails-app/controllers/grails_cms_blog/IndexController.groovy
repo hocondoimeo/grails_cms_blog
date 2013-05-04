@@ -1,6 +1,20 @@
 package grails_cms_blog
 
+import org.compass.core.engine.SearchEngineQueryParseException
+
 class IndexController {
 // for front end
+	def searchableService
     def index() {}
+	def search = {
+		  if (!params.q?.trim()) {
+			[:]
+		  }
+		  try {
+			[searchResult: searchableService.search(params.q, params)]
+		  } catch (SearchEngineQueryParseException ex) {
+			[parseException: true]
+		  }
+		
+	}
 }
