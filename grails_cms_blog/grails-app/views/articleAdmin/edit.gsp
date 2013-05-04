@@ -28,7 +28,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form method="post"  class="form-horizontal">
+			<g:uploadForm controller="admin/article" method="post" class="form-horizontal" enctype="multipart/form-data">
 				<g:hiddenField name="id" value="${articleInstance?.id}" />
 				<g:hiddenField name="version" value="${articleInstance?.version}" />
 				<fieldset class="form">
@@ -42,7 +42,7 @@
 						</div>
 					</div>
 				</fieldset>
-			</g:form>
+			</g:uploadForm>
 		</div>
 	</body>
 </html>

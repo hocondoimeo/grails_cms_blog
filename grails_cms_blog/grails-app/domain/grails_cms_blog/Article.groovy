@@ -28,6 +28,6 @@ class Article {
 	}
 	
 	static public bootstrap(){
-		new Article(title: 'Technical News', desc: 'IT desc', content: 'Predefined names by Grails will be filled automatically', category: new Category(name: 'Global').save(flush: true), author: new User(name:'author', email:'author@kiss-concept.com', password:'123456', role: "author").save(flush: true), image: 'images.jpg').save(flush: true)
+		new Article(title: 'Technical News', desc: 'IT desc', content: 'Predefined names by Grails will be filled automatically', category: new Category(name: 'Global').save(flush: true), author: new User(name:'author', email:'author@kiss-concept.com', password:'123456', passwordHashed: 'fEqNCco3Yq9h5ZUglD3CZJT4lBs=', confirm: '123456', role: "author").save(flush: true), image: 'images.jpg').save(flush: true)
 	}
 }

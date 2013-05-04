@@ -1,4 +1,7 @@
 <%@ page import="grails_cms_blog.User" %>
+
+
+
 <div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
 	<label for="name" class="control-label">
 		<g:message code="user.name.label" default="Name" />
@@ -29,6 +32,16 @@
 	</div>
 </div>
 
+<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'confirm', 'error')} ">
+	<label for="confirm" class="control-label">
+		<g:message code="user.confirm.label" default="Confirm" />
+		<span class="required-indicator">*</span>
+	</label>
+	<div class="controls">
+		<g:field type="password" name="confirm" required="" value="${userInstance?.confirm}"/>
+	</div>
+</div>
+
 <div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'role', 'error')} ">
 	<label for="role" class="control-label">
 		<g:message code="user.role.label" default="Role" />
@@ -50,13 +63,21 @@
 <g:each in="${userInstance?.articles?}" var="a">
     <li><g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
 </g:each>
-<g:if test="${session?.user?.role == "admin"}">
 <li class="add">
 <g:link controller="admin/article" action="create" params="['user.id': userInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'article.label', default: 'Article')])}</g:link>
 </li>
-</g:if>
 </ul>
 
 	</div>
 </div>
+
+<%--<div class="control-group fieldcontain ${hasErrors(bean: userInstance, field: 'passwordHashed', 'error')} ">
+	<label for="passwordHashed" class="control-label">
+		<g:message code="user.passwordHashed.label" default="Password Hashed" />
+		
+	</label>
+	<div class="controls">
+		<g:textField name="passwordHashed" value="${userInstance?.passwordHashed}"/>
+	</div>
+</div>--%>
 

@@ -27,7 +27,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:uploadForm action="save" class="form-horizontal" enctype="multipart/form-data">
+			<g:uploadForm controller="admin/article" action="save" class="form-horizontal" enctype="multipart/form-data">
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

@@ -26,7 +26,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form action="save"  class="form-horizontal">
+			<g:form controller="admin/category" action="save" class="form-horizontal">
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

@@ -23,6 +23,7 @@ class UserAdminController {
 
     def save() {
         def userInstance = new User(params)
+		userInstance.passwordHashed = params.password.encodeAsPassword()
         if (!userInstance.save(flush: true)) {
             render(view: "create", model: [userInstance: userInstance])
             return
@@ -118,7 +119,9 @@ class UserAdminController {
 			redirect(controller: "admin/user", action: "login")
 			return
 		}
-		def user = User.findByEmailAndPassword(params.email, params.password)
+		def passwordHashed = params.password.encodeAsPassword()
+		//def user = User.findByEmailAndPassword(params.email, params.password)
+		def user = User.findByEmailAndPasswordHashed(params.email, passwordHashed)
 		if(user){
 			session.user = user
 			flash.message = "Hello ${user.name}!"

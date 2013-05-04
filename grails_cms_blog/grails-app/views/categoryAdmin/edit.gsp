@@ -27,7 +27,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form method="post"  class="form-horizontal">
+			<g:form controller="admin/category" method="post"  class="form-horizontal">
 				<g:hiddenField name="id" value="${categoryInstance?.id}" />
 				<g:hiddenField name="version" value="${categoryInstance?.version}" />
 				<fieldset class="form">

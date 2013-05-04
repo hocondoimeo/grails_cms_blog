@@ -18,6 +18,7 @@ class UrlMappings {
 			action = {params.aName}
 		}
 		"500"(view:'/error')
+		"404"(controller: "index", action: "index")
 	}
 }
 

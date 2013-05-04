@@ -11630,3 +11630,393 @@ ContentType: image/jpeg
 !SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:03:56.471
 !MESSAGE ------System.err:-----------
 
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 11:08:37.890
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 11:08:37.890
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:08:37.890
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:08:37.890
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 11:28:42.786
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: The command '/usr/lib/jvm/java-6-openjdk/bin/java (May 4, 2013 11:08:42 AM)' was terminated because it didn't produce new output for some time.
+
+See details for the output produced so far.
+
+If you think the command simply needed more time, you can increase the time limit in the Grails preferences page.
+
+See menu Windows >> Preferences >> Grails >> Launch
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+Contains: ------System.err:-----------
+
+Terminating process: Timeout: no new output for 600000 milliseconds
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 11:28:42.786
+!MESSAGE The command '/usr/lib/jvm/java-6-openjdk/bin/java (May 4, 2013 11:08:42 AM)' was terminated because it didn't produce new output for some time.
+
+See details for the output produced so far.
+
+If you think the command simply needed more time, you can increase the time limit in the Grails preferences page.
+
+See menu Windows >> Preferences >> Grails >> Launch
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:28:42.786
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 11:28:42.786
+!MESSAGE ------System.err:-----------
+
+Terminating process: Timeout: no new output for 600000 milliseconds
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:16:07.087
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:16:07.088
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:16:07.088
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:16:07.088
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:18:11.514
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:18:11.514
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:18:11.514
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:18:11.514
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:19:42.068
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:19:42.068
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:19:42.068
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:19:42.068
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:22:13.014
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:22:13.014
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:22:13.014
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:22:13.014
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:33:15.233
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:33:15.234
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:33:15.234
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:33:15.234
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:34:43.532
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:34:43.533
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:34:43.533
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:34:43.533
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:43:09.136
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:43:09.136
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:43:09.136
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+fEqNCco3Yq9h5ZUglD3CZJT4lBs=
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:43:09.136
+!MESSAGE ------System.err:-----------
+
+
+!ENTRY org.grails.ide.eclipse.core 4 0 2013-05-04 13:48:23.996
+!MESSAGE Problem executing: -Dserver.port=8181 run-app
+!STACK 1
+org.eclipse.core.runtime.CoreException: Command terminated with an error code (see details for output)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch$LaunchResult.getCoreException(SynchLaunch.java:168)
+	at org.grails.ide.eclipse.core.launch.SynchLaunch.synchExec(SynchLaunch.java:57)
+	at org.grails.ide.eclipse.commands.GrailsExecutor.synchExec(GrailsExecutor.java:131)
+	at org.grails.ide.eclipse.longrunning.LongRunningProcessGrailsExecutor.synchExec(LongRunningProcessGrailsExecutor.java:60)
+	at org.grails.ide.eclipse.commands.GrailsCommand.synchExec(GrailsCommand.java:169)
+	at org.grails.ide.eclipse.ui.internal.inplace.GrailsLaunchUtils$1.run(GrailsLaunchUtils.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+Contains: ------System.err:-----------
+
+!SUBENTRY 1 org.grails.ide.eclipse.core 4 4 2013-05-04 13:48:23.997
+!MESSAGE Command terminated with an error code (see details for output)
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:48:23.997
+!MESSAGE ------System.out:-----------
+ | Loading Grails 2.2.1
+| Configuring classpath.
+| Environment set to development.....
+| Packaging Grails application....
+| Compiling 1 source files.....
+| Running Grails application
+| Server running. Browse to http://localhost:8181/grails_cms_blog
+
+!SUBENTRY 2 org.grails.ide.eclipse.core 4 0 2013-05-04 13:48:23.997
+!MESSAGE ------System.err:-----------
+

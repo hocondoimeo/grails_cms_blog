@@ -32,8 +32,10 @@
 					
 						<g:sortableColumn property="role" title="${message(code: 'user.role.label', default: 'Role')}" />
 					
-						<g:sortableColumn property="dateCreated" title="${message(code: 'user.dateCreated.label', default: 'Date Created')}" />
+						<%--<g:sortableColumn property="confirm" title="${message(code: 'user.confirm.label', default: 'Confirm')}" />--%>
 					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'user.dateCreated.label', default: 'Date Created')}" />
+						
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'user.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
@@ -50,8 +52,10 @@
 					
 						<td>${fieldValue(bean: userInstance, field: "role")}</td>
 					
-						<td><g:formatDate date="${userInstance.dateCreated}" /></td>
+						<%--<td>${fieldValue(bean: userInstance, field: "confirm")}</td>--%>
 					
+						<td><g:formatDate date="${userInstance.dateCreated}" /></td>
+						
 						<td><g:formatDate date="${userInstance.lastUpdated}" /></td>
 					
 					</tr>

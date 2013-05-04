@@ -71,17 +71,28 @@
 				<div class="fieldcontain">
 					<dt><span id="articles-label" class="property-label"><g:message code="user.articles.label" default="Articles" /></span></dt>
 				    <dd>
-						<ul class="one-to-many">
+					
 						<g:each in="${userInstance.articles}" var="a">
 						<span class="property-value" aria-labelledby="articles-label">
-						<%--<g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link>--%>
-						<li><g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+							<%--<g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link>--%>
+							<li><g:link controller="admin/article" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
 						</span>
 						</g:each>
-						</ul>
+					
 					</dd>
 				</div>
 				</g:if>
+			
+				<%--<g:if test="${userInstance?.confirm}">
+				<div class="fieldcontain">
+					<dt><span id="confirm-label" class="property-label"><g:message code="user.confirm.label" default="Confirm" /></span></dt>
+				    <dd>
+					
+						<span class="property-value" aria-labelledby="confirm-label"><g:fieldValue bean="${userInstance}" field="confirm"/></span>
+					
+					</dd>
+				</div>
+				</g:if>--%>
 			
 				<g:if test="${userInstance?.dateCreated}">
 				<div class="fieldcontain">
@@ -104,6 +115,17 @@
 					</dd>
 				</div>
 				</g:if>
+			
+				<%--<g:if test="${userInstance?.passwordHashed}">
+				<div class="fieldcontain">
+					<dt><span id="passwordHashed-label" class="property-label"><g:message code="user.passwordHashed.label" default="Password Hashed" /></span></dt>
+				    <dd>
+					
+						<span class="property-value" aria-labelledby="passwordHashed-label"><g:fieldValue bean="${userInstance}" field="passwordHashed"/></span>
+					
+					</dd>
+				</div>
+				</g:if>--%>
 			
 			</br>
 			<dd>
