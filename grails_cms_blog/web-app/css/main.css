@@ -1,3 +1,4 @@
+/*------------------General ------------------------*/
 .container {
 	width: 1124px;
 }
@@ -27,4 +28,88 @@
 .tittle {
 	color: #777;
 	text-shadow: 0 1px 0 white;
+}
+.date {
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #777;
+}
+/*------------------Home page ------------------------*/
+#myCarousel.border,.lasted-articles .border {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.lasted-articles .border {
+	height: 385px;
+}
+#myCarousel img {
+	width: 668px;
+	height: 350px;
+	margin-left: 65px;
+}
+#myCarousel img:hover {
+	opacity: 0.8
+}
+
+#myCarousel .carousel-caption {
+	right: 65px;
+	top: 0px;
+	width: 300px;
+	left: 733px;
+	background: none;
+	padding: 0px 20px;
+}
+
+#myCarousel .carousel-caption h4 {
+	font-size: 36px;
+	line-height: 40px;
+	color: #888;
+	text-shadow: 0 1px 0 black;
+}
+#myCarousel .carousel-caption a:hover{
+	color: #333
+}
+.lasted-articles h4 {
+	font-size: 20px;
+	color: #333;
+}
+
+#myCarousel .carousel-caption p,.lasted-articles p {
+	color: #777;
+}
+
+
+
+.lasted-articles img {
+	height: 200px;
+	width: 100%;
+}
+.lasted-articles img:hover {
+	opacity: 0.8
+}
+.lasted-articles a:hover, .list-articles a:hover{
+	text-decoration: none
+}
+
+/*------------------List articles --------------------*/
+.list-articles .border {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	height: 385px;
+}
+
+.list-articles h4 {
+	font-size: 20px;
+	color: #333;
+}
+
+.list-articles p {
+	color: #777;
+}
+
+.list-articles img {
+	height: 200px;
+	width: 100%;
 }

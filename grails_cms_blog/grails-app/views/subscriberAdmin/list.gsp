@@ -11,8 +11,8 @@
 		<a href="#list-subscriber" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div role="navigation">
 			<ul class="breadcrumb">
-				<li><a class="home" href="${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a> <span class="divider">/</span></li>
-				<li><g:link class="create" action="create" controller="admin/subscriber"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><a class="home" href="${createLink(uri: '/admin')}"><g:message code="default.home.label"/></a></li>
+				
 			</ul>
 		</div>
 		<div id="list-subscriber" class="content scaffold-list" role="main">

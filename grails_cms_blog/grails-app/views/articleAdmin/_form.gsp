@@ -52,6 +52,15 @@
 	</div>
 </div>
 
+<div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'isFeatured', 'error')}">
+	<label for="category" class="control-label">
+		<g:message code="article.isFeatured.label" default="IsFeatured" />		
+	</label>
+	<div class="controls">		
+		<g:checkBox name="isFeatured" value="${articleInstance?.isFeatured}"/>
+	</div>
+</div>
+
 <%--<div class="control-group fieldcontain ${hasErrors(bean: articleInstance, field: 'user', 'error')} required">
 	<label for="user" class="control-label">
 		<g:message code="article.user.label" default="User" />

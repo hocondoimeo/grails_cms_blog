@@ -45,8 +45,7 @@
                     </g:form>
 				</div>
 			</div>
-			<div class="content border">
-			
+			<div class="content">			
 				<g:layoutBody/>	
 			</div>
 		</div>	

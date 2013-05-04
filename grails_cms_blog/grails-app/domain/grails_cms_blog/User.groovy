@@ -29,7 +29,7 @@ class User {
 	
 	static public bootstrap(){
 		new User(name:'admin', email:'admin@kiss-concept.com', password:'123456', passwordHashed: 'fEqNCco3Yq9h5ZUglD3CZJT4lBs=', confirm: '123456',role: "admin").save(flush: true)
-		//new User(name:'author', email:'author@kiss-concept.com', password:'123456', role: "author").save(flush: true)
+		new User(name:'author', email:'author@kiss-concept.com', password:'123456', passwordHashed: 'fEqNCco3Yq9h5ZUglD3CZJT4lBs=', confirm: '123456',role: "author").save(flush: true)
 		
 	}
 }

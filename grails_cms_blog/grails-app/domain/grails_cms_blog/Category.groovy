@@ -20,7 +20,7 @@ class Category {
 		new Category(name: 'Sports').save(flush: true)
 		new Category(name: 'Music').save(flush: true)
 		new Category(name: 'Technical').save(flush: true)
-//		new Category(name: 'Global').save(flush: true)
+		new Category(name: 'Global').save(flush: true)
 	}
 	
 }

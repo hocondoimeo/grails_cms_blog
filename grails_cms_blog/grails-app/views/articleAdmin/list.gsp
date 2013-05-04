@@ -46,7 +46,7 @@
 					
 						<g:sortableColumn property="category" title="${message(code: 'article.category.label', default: 'Category')}" />
 						</g:if>
-					
+						<g:sortableColumn property="isFeatured" title="${message(code: 'article.isFeatured.label', default: 'IsFeatured')}" />
 						<g:sortableColumn property="dateCreated" title="${message(code: 'article.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'article.lastUpdated.label', default: 'Last Updated')}" />
@@ -118,7 +118,7 @@
 								
 								<td><g:link controller="admin/category" action="show" id="${articleInstance?.category?.id}">${articleInstance?.category?.encodeAsHTML()}</g:link></td>
 							</g:if>
-							
+							<td>${(articleInstance.isFeatured) ? 'Yes' : 'No'}</td>
 							<td><g:formatDate date="${articleInstance.dateCreated}" /></td>
 						
 							<td><g:formatDate date="${articleInstance.lastUpdated}" /></td>

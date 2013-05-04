@@ -103,3 +103,4 @@ grails {
 			   "mail.smtp.socketFactory.fallback":"false"]
 	}
  }
+grails.plugins.twitterbootstrap.fixtaglib = true

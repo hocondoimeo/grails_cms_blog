@@ -2,6 +2,7 @@
 <%@ page import="org.springframework.util.ClassUtils" %>
 <%@ page import="grails.plugin.searchable.internal.lucene.LuceneUtils" %>
 <%@ page import="grails.plugin.searchable.internal.util.StringQueryUtils" %>
+<%@ page import="grails_cms_blog.Article" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -60,27 +61,33 @@
 	    </g:if>
 	
 	    <g:if test="${haveResults}">
-	      <div class="results">
-	        <g:each var="result" in="${searchResult.results}" status="index">
-	          <div class="result">
-	            <g:set var="className" value="${ClassUtils.getShortName(result.getClass())}" />
-	            <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}" />
-	            <div class="name"><a href="${link}">${className} #${result.id}</a></div>
-	            <g:set var="desc" value="${result.toString()}" />
-	            <g:if test="${desc.size() > 120}"><g:set var="desc" value="${desc[0..120] + '...'}" /></g:if>
-	            <div class="desc">${desc.encodeAsHTML()}</div>
-	            <div class="displayLink">${link}</div>
-	          </div>
+	      <div class="row-fluid list-articles">
+	        <g:each var="result" in="${searchResult.results}" status="i">
+	        	<g:set var="title" value="${result.toString()}" />
+	        	<g:set var="article" value="${Article.get(result.id)}" />
+	          	 <div class="span4 border">
+					<g:link controller="cat" action="article" id="${article.id}">
+						<g:displayFile filename="${article.image}" user="${article.author.name}" />
+					</g:link>
+					<div class="des-article">
+						<g:link controller="cat" action="article" id="${article.id}">
+							<h4>${article.title}</h4>
+						</g:link>
+						<p>${article.desc}</p>
+						<p class="date"><g:formatDate date="${article.dateCreated}" type="date" style="MEDIUM" /></p>
+					</div>
+				</div>
+			  	${((i+1) % 3) == 0? '</div><div class="row-fluid list-articles">' : ''}    
+	         
 	        </g:each>
 	      </div>
 	
 	      <div>
-	        <div class="paging">
-	          <g:if test="${haveResults}">
-	              Page:
-	              <g:set var="totalPages" value="${Math.ceil(searchResult.total / searchResult.max)}" />
-	              <g:if test="${totalPages == 1}"><span class="currentStep">1</span></g:if>
-	              <g:else><g:paginate controller="index" action="search" params="[q: params.q]" total="${searchResult.total}" prev="&lt; previous" next="next &gt;"/></g:else>
+	        <div class="pagination">
+	          <g:if test="${haveResults}">	              
+	              <g:set var="totalPages" value="${Math.ceil(searchResult.total / searchResult.max)}" />	              
+	              <g:paginate controller="index" action="search" params="[q: params.q]" total="${searchResult.total}" prev="«" next="»"/>
+	              
 	          </g:if>
 	        </div>
 	      </div>

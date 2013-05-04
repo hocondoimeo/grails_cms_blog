@@ -11,7 +11,7 @@
 	<body>
 		
 		
-		<div id="create-subscriber" class="content scaffold-create" role="main">
+		<div id="create-subscriber" class="content scaffold-create border" role="main">
 			<h2 class="tittle">Subscribe</h2>
 			<g:if test="${flash.message}">
 				<div class="alert alert-success" role="status">${flash.message}</div>
