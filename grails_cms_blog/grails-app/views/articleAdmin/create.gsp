@@ -5,6 +5,7 @@
 		<meta name="layout" content="admin">
 		<g:set var="entityName" value="${message(code: 'article.label', default: 'Article')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<ckeditor:resources/>
 	</head>
 	<body>
 		<a href="#create-article" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

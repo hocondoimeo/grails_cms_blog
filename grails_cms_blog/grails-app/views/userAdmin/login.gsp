@@ -17,43 +17,54 @@
 		<r:require modules="bootstrap"/>
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'admin.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<r:layoutResources />
 	</head>
 	<body>
-		<div class="body">
-	      <h1>Administrator</h1>
-	      <g:if test="${flash.message}">
-	        <div class="message">${flash.message}</div>
-	      </g:if>
-	      <g:form action="authenticate" method="post">
-	        <div class="dialog">
-	          <table>
-	            <tbody>            
-	              <tr class="prop">
-	                <td class="name">
-	                  <label for="login">Email:</label>
-	                </td>
-	                <td>
-	                  <input type="text" id="email" name="email"/>
-	                </td>
-	              </tr> 
-	          
-	              <tr class="prop">
-	                <td class="name">
-	                  <label for="password">Password:</label>
-	                </td>
-	                <td>
-	                  <input type="password" id="password" name="password"/>
-	                </td>
-	              </tr> 
-	            </tbody>
-	          </table>
-	        </div>
-	        <div class="buttons">
-	          <span class="button">
-	            <input class="save" type="submit" value="Login" />
-	          </span>
-	        </div>
-	      </g:form>
+		<div class="container">
+			<div class="content border">
+				<div style="left:40%; position: relative;">
+			      <h1>Administrator</h1>
+			      <g:if test="${flash.message}">
+			        <div class="message" style="color:red">${flash.message}</div>
+			      </g:if>
+			      <g:form action="authenticate" method="post" class="form-horizontal">
+			      	<fieldset class="form">
+				        <div class="dialog">
+				          <table>
+				            <tbody>            
+				              <tr class="prop">
+				                <td class="name">
+				                  <label for="login">Email:</label>
+				                </td>
+				                <td>
+				                  <input type="text" id="email" name="email"/>
+				                </td>
+				              </tr> 
+				          
+				              <tr class="prop">
+				                <td class="name">
+				                  <label for="password">Password:</label>
+				                </td>
+				                <td>
+				                  <input type="password" id="password" name="password"/>
+				                </td>
+				              </tr> 
+				            </tbody>
+				          </table>
+				        </div>
+				    </fieldset>
+			        <fieldset class="buttons">
+				        <div class="control-group">
+				          <div class="controls">
+				            <input class="save" type="submit" value="Login" class="save btn btn-primary"/>
+				          </div>
+				        </div>
+       				</fieldset>
+			      </g:form>
+		    	</div>
+		    </div>
 	    </div>
+	    <g:javascript library="application"/>
+		<r:layoutResources />
 	</body>
 </html>

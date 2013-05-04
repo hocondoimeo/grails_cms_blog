@@ -36,7 +36,8 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="controls">
-		<g:textArea name="content" cols="40" rows="5" maxlength="1000" required="" value="${articleInstance?.content}"/>
+		<ckeditor:editor name="content" height="400px" width="80%">${articleInstance?.content}</ckeditor:editor>
+		<%--<g:textArea name="content" cols="40" rows="5" maxlength="1000" required="" value="${articleInstance?.content}"/>--%>
 	</div>
 </div>
 

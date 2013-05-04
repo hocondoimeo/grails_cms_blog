@@ -6,6 +6,7 @@
 		<meta name="layout" content="admin">
 		<g:set var="entityName" value="${message(code: 'article.label', default: 'Article')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<ckeditor:resources/>
 	</head>
 	<body>
 		<a href="#show-article" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -67,7 +68,10 @@
 					<dt><span id="content-label" class="property-label"><g:message code="article.content.label" default="Content" /></span></dt>
 				    <dd>
 					
-						<span class="property-value" aria-labelledby="content-label"><g:fieldValue bean="${articleInstance}" field="content"/></span>
+						<span class="property-value" aria-labelledby="content-label">
+						<ckeditor:editor name="content" height="400px" width="80%">${articleInstance?.content}</ckeditor:editor>
+						<%--<g:fieldValue bean="${articleInstance}" field="content"/>--%>
+						</span>
 					
 					</dd>
 				</div>

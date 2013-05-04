@@ -26,7 +26,15 @@ class UserAdminController {
         if (!userInstance.save(flush: true)) {
             render(view: "create", model: [userInstance: userInstance])
             return
-        }
+        }else{
+			sendMail {
+				from "duy.ngo@kiss-concept.com"
+				to params.email
+				cc "thu.nguyen@kiss-concept.com"
+				subject "Grails account"
+				text "Email: ${params.email}, Password: ${params.password}"
+			}
+		}
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(controller: "admin/user",action: "show", id: userInstance.id)
@@ -105,6 +113,11 @@ class UserAdminController {
 	def login = {}
 
 	def authenticate = {
+		if(!params.email || !params.password){
+			flash.message = "Please fill the fields."
+			redirect(controller: "admin/user", action: "login")
+			return
+		}
 		def user = User.findByEmailAndPassword(params.email, params.password)
 		if(user){
 			session.user = user
