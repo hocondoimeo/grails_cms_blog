@@ -29,12 +29,12 @@
 			<div class="navbar">
   				<div class="navbar-inner">
 					<ul class="nav">
-	  					<li class="active"><a href="${homePage}">Home</a></li>
+	  					<li <g:activeMenu controller="index" action="index"></g:activeMenu>><a href="${homePage}">Home</a></li>
 	  					<g:each in="${Category.list()}" status="i" var="catInstance">
-	  						<li><g:link action="index" controller="cat" id="${catInstance.id}">${catInstance.name}</g:link></li>
+	  						<li <g:activeMenu controller="cat" action="index" id="${catInstance.id}"></g:activeMenu>><g:link action="index" controller="cat" id="${catInstance.id}">${catInstance.name}</g:link></li>
 	  					</g:each>
-	  					<li><g:link action="index" controller="subscribe">Subscribe</g:link></li>
-	  					<li><g:link controller="admin/index">Administrator</g:link></li>	  					
+	  					<li <g:activeMenu controller="subscribe" action="index"></g:activeMenu>><g:link action="index" controller="subscribe">Subscribe</g:link></li>
+	  					<li <g:activeMenu controller="indexAdmin" action="index"></g:activeMenu>><g:link controller="admin/index">Administrator</g:link></li>	  					
 					</ul>
 					<g:form class="navbar-search pull-right" 
 						url='[controller: "index", action: "search"]'
