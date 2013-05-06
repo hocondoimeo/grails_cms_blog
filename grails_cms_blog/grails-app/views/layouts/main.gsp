@@ -34,6 +34,7 @@
 	  						<li <g:activeMenu controller="cat" action="index" id="${catInstance.id}"></g:activeMenu>><g:link action="index" controller="cat" id="${catInstance.id}">${catInstance.name}</g:link></li>
 	  					</g:each>
 	  					<li <g:activeMenu controller="subscribe" action="index"></g:activeMenu>><g:link action="index" controller="subscribe">Subscribe</g:link></li>
+	  					<li <g:activeMenu controller="index" action="feed"></g:activeMenu>><g:link action="feed" controller="index">RSS Feed</g:link></li>
 	  					<li <g:activeMenu controller="indexAdmin" action="index"></g:activeMenu>><g:link controller="admin/index">Administrator</g:link></li>	  					
 					</ul>
 					<g:form class="navbar-search pull-right" 

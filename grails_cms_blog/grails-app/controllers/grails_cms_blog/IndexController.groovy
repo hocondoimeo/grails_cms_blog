@@ -31,4 +31,19 @@ class IndexController {
 		  }
 		
 	}
+	
+	def feed = {
+	  def appName = request.requestURL[0..-21]
+      render(feedType:"rss", feedVersion:"2.0") {
+         title = "My test feed"
+         link = "${appName}/index/feed"
+         description = "The funky Grails news feed"
+         Article.list().each { article ->
+            entry(article.title) {
+               link = "${appName}/article/${article.id}"
+               article.content // return the content
+            }
+         }
+      }
+   }
 }

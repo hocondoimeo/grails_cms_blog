@@ -1,5 +1,5 @@
 #dependencies
-115
+118
 /root/.grails/ivy-cache/org.springframework.uaa/org.springframework.uaa.client/bundles/org.springframework.uaa.client-1.0.1.RELEASE.jar
 /root/.grails/ivy-cache/com.google.protobuf/protobuf-java/jars/protobuf-java-2.4.1.jar
 /root/.grails/ivy-cache/com.googlecode.json-simple/json-simple/jars/json-simple-1.1.jar
@@ -107,6 +107,9 @@
 /root/.grails/ivy-cache/org.grails/grails-plugin-testing/jars/grails-plugin-testing-2.2.1.jar
 /root/.grails/ivy-cache/org.grails/grails-test/jars/grails-test-2.2.1.jar
 /root/.grails/ivy-cache/org.springframework/spring-test/jars/spring-test-3.1.4.RELEASE.jar
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/lib/rome-0.9.jar
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/lib/itunes-0.4.jar
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/lib/jdom.jar
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/searchable-0.6.4/lib/lucene-analyzers.jar
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/searchable-0.6.4/lib/lucene-spellchecker.jar
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/searchable-0.6.4/lib/compass-2.2.1-src.jar
@@ -116,7 +119,7 @@
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/searchable-0.6.4/lib/lucene-snowball.jar
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/searchable-0.6.4/lib/lucene-highlighter.jar
 #sources
-44
+47
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/cache-1.0.1/grails-app/conf
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/cache-1.0.1/grails-app/services
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/cache-1.0.1/grails-app/taglib
@@ -132,6 +135,9 @@
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/database-migration-1.3.2/grails-app/controllers
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/database-migration-1.3.2/grails-app/views
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/database-migration-1.3.2/src/groovy
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/grails-app/i18n
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/grails-app/taglib
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/src/groovy
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/hibernate-2.2.1/grails-app/i18n
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/jquery-1.8.3/grails-app/conf
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/jquery-1.8.3/grails-app/i18n
@@ -164,9 +170,10 @@
 #workDir
 /root/.grails/2.2.1
 #plugin descriptors
-11
+12
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/jquery-1.8.3/plugin.xml
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/twitter-bootstrap-2.3.0/plugin.xml
+/root/.grails/2.2.1/projects/grails_cms_blog/plugins/feeds-1.5/plugin.xml
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/tomcat-2.2.1/plugin.xml
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/ckeditor-3.6.3.0/plugin.xml
 /root/.grails/2.2.1/projects/grails_cms_blog/plugins/searchable-0.6.4/plugin.xml
