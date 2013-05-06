@@ -32,7 +32,10 @@ class ArticleAdminController {
     }
 
     def create() { 
-        [articleInstance: new Article(params), userId : params.user.id]
+		if(params?.user?.id)
+        	[articleInstance: new Article(params), userId : params.user.id]
+		else
+			[articleInstance: new Article(params)]
     }
 
     def save() {
